@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<title>Hack Coming Winter</title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="BotSnowy"
+  agent-id="8b880d98-4810-466d-8b09-1e5996a71a1d"
+  language-code="en"
+></df-messenger>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+  
+<!-- header start -->
+<header class="text-gray-600 body-font bg-indigo-100">
+  <!-- style="position: fixed; width: 100%;" -->
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center bg-indigo-100">
+    <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+			<img src="{{ url_for('static', filename='img/logo.png') }}" class="w-10 h-10 text-white p-2 bg-white-500 rounded-full rotate45" alt="Winter">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg> -->
+      <span class="ml-3 text-xl">Hack Coming Winter</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href="#home" class="mr-5 hover:text-gray-900">Home</a>
+      <a href="#about" class="mr-5 hover:text-gray-900">About</a>
+      <a href="#destinations" class="mr-5 hover:text-gray-900">Destinations</a>
+      <a href="#conditions" class="mr-5 hover:text-gray-900">Conditions</a>
+      <a href="#precautions" class="mr-5 hover:text-gray-900">Precautions</a>
+      <a href="#contact" class="mr-5 hover:text-gray-900">Contact</a>
+    </nav>
+    <a href="/login-register">
+    <button class="inline-flex items-center bg-green-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+			Login / Register
+			<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    </a>
+  </div>
+</header>
+<!-- header start -->
+
+<!-- main start -->
+<section class="text-gray-600 body-font" id="home">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Winter is coming,
+        <br class="hidden lg:inline-block">Where are you going?
+      </h1>
+      <!-- <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant 
+				cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic 
+				tumeric truffaut hexagon try-hard chambray.
+			</p> -->
+			<p>Winter is here, and is a tough time of year for many. The days are long and cold, 
+				and weather extremes can not only strike at a moment’s notice, but they can bring 
+				treacherous and dangerous conditions. Learn To make the most of this season with the 
+				best winter hacks.</p> <br>
+      <!-- <br><br><br> -->
+			<div class="flex justify-center">
+        <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+					<a href="/login-register">Get Started</a></button>
+        <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+					<a href="#about">Discover More</a></button>
+      </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" width="720x600" src="{{ url_for('static', filename='img/main.png') }}">
+    </div>
+  </div>
+</section>
+<!-- main end -->
+
+<!-- about start -->
+<section class="text-gray-600 body-font bg-gray-100" id="about">
+  <div class="container px-5 pt-12 mx-auto">
+    <div class="flex flex-wrap w-full pb-10">
+      <div class="lg:w-1/2 mb-6 lg:mb-0 w-full"><!--w-full-->
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About our work</h1>
+        <div class="h-1 w-20 bg-green-500 rounded"></div>
+      </div>
+      <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 -ml-20">
+				We Want To Provide A Platform That Suggest Best Hacks 
+				To Get You Through The Toughest (And Longest) Season Of The Year.
+				Winter. It's the darkest and often the coldest of the seasons, but with chill and the 
+				possible snowfall comes the holiday season, and ample moments for cozy retreat and 
+				hibernation. Who doesn't love curling up with a winter cocktail by the fireplace, 
+				snuggling up with a blanket and indulging a bit.
+			</p>
+    </div>
+	</div>
+</section>
+<!-- about end -->
+
+<!-- destination start -->
+<section class="text-gray-600 body-font bg-gray-100" id="destinations">
+  <div class="container px-5 pb-12 mx-auto">
+    <div class="flex flex-wrap w-full mb-4 justify-center">
+      <!-- <div class="lg:w-1/2 w-full mb-6 lg:mb-0"> -->
+        <h1 class="sm:text-3xl text-2xl w-full text-center font-medium title-font mb-2 text-gray-900">Winter Destinations</h1>
+        <div class="h-1 w-20 bg-green-500 rounded"></div>
+      <!-- </div> -->
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555998547/shape/mentalfloss/istock_000025729969_small.jpg?itok=IL3uZazs/721x401" alt="content">
+          <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">MONTANA, USA</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">WHITEFISH</h2>
+          <p class="leading-relaxed text-base">This quaint ski town is perfect when you really want to 
+            get away from it all. With bustling shops and a ski resort situated on Big Mountain, 
+            there’s plenty to do and see.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555998550/shape/mentalfloss/istock_000022742122_small_0.jpg?itok=q4H0tqR-/722x402" alt="content">
+          <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">CALIFORNIA, USA</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">LAKE TAHOE</h2>
+          <p class="leading-relaxed text-base">Lake Tahoe is beautiful year-round, but its gorgeous landscape really 
+            peaks in the winter. Besides 
+            offering over a dozen ski resorts, the city also has hot springs, beautiful vistas, and a vibrant night life.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555998549/shape/mentalfloss/istock_000065377065_small.jpg?itok=grqSxTC8/723x403" alt="content">
+          <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">ICELAND</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">GULLFOSS</h2>
+          <p class="leading-relaxed text-base">You can find the Gullfoss waterfall in southwest 
+            Iceland in the canyon of the Hvítá river, which is fed by Langjökull, the second largest glacier in Iceland.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555998548/shape/mentalfloss/istock_000069955129_small.jpg?itok=A0vdUj5z/720x400" alt="content">
+          <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">NORWAY</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">SVALBARD</h2>
+          <p class="leading-relaxed text-base">Situated between the 74th and the 81st parallel, you can’t get much 
+            higher than this little mining town. 
+            It’s one of the northernmost inhabited areas in the world, making it a prime location to catch the Northern Lights.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- destination end -->
+
+<!-- gallery start -->
+<section class="text-gray-600 body-font" id="conditions">
+  <div class="container px-5 pt-12 mx-auto w-4/5">
+    <div class="flex flex-col text-center w-full mb-4 items-center">
+      <!-- <div class="lg:w-1/3 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About our work</h1>
+        <div class="h-1 w-20 bg-green-500 rounded"></div>
+      </div> -->
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Conditions In Winter</h1>
+      <div class="h-1 w-20 bg-green-500 rounded"></div>
+      <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p> -->
+    </div>
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" width="600x360" src="{{ url_for('static', filename='img/hypothermia.jpg') }}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">HYPERTHERMIA</h2>
+            <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Hypothermia</h1> -->
+            <p class="leading-relaxed">This conditionoccurs when your body temperature drops below 95˚F (35˚C). 
+              This results from your body losing more heat than it can make, such as when you are exposed to cold or water.
+              <br>
+              <!-- Hypothermia can show up as shivering, clumsiness, confusion, tiredness, or urinating more than usual. 
+              If not treated quickly, hypothermia can cause severe health problems, including death. -->
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" width="601x361" src="{{ url_for('static', filename='img/frostbite.jpg') }}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">FROSTBITE</h2>
+            <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Frostbite</h1> -->
+            <p class="leading-relaxed">This results from cold temperatures damaging parts of 
+              your body, most often your ears, nose, cheeks, chin, fingers, and toes. Severe cases require medical care to prevent complications.
+              <br>
+              <!-- Frostbitten skin may look white or gray and can feel hard or waxy. Blisters can form. 
+              You may also have trouble moving that part of your body. In severe cases, the skin will turn black. -->
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" width="603x363" src="{{ url_for('static', filename='img/heart-attact.jpg') }}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">HEART PROBLEMS</h2>
+            <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Heart problems</h1> -->
+            <p class="leading-relaxed">Cold weather can increase your risk of a heart attack. When you’re outside in the cold, 
+              your heart works harder to keep you warm — leading to increased heart rate and blood pressure.
+              <br>
+              <!-- This can cause heart problems, especially if you have an existing heart condition. If you aren’t used to regular exercise, 
+              strenuous activities like shoveling snow may put you at risk for a heart attack. -->
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" width="602x362" 
+           src="{{ url_for('static', filename='img/flu.jpg') }}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">FLU</h2>
+            <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Flu</h1> -->
+            <p class="leading-relaxed">You got the flu from airborne droplets sneezed or coughed, or by touching contaminated surfaces. 
+              Flu viruses keep evolving, which is why flu shots, which are updated every year, are never fully effective.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" width="605x365" src="{{ url_for('static', filename='img/pneumonia.jpg') }}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">PNUEMONIA</h2>
+            <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Pneumonia</h1> -->
+            <p class="leading-relaxed">Viruses are responsible for about one-third of cases. The rest are caused by bacteria or 
+              fungi that are inhaled, particularly by people weakened by surgery, illness, age or smoking.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" width="606x366" src="{{ url_for('static', filename='img/whooping-cough.jpg') }}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-green-500 mb-1">WHOOPING COUGH</h2>
+            <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Whooping Cough</h1> -->
+            <p class="leading-relaxed">Also known as pertussis, whooping cough is a serious and very contagious bacterial 
+              infection that mainly affects infants and young children.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--gallery end-->
+
+<!-- gallery2 start -->
+<section class="text-gray-600 body-font" id="precautions">
+  <div class="container px-5 mx-auto w-4/5">
+    <div class="flex flex-col text-center w-full mb-4 mt-24 items-center">
+      <!-- <div class="lg:w-1/3 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About our work</h1>
+        <div class="h-1 w-20 bg-green-500 rounded"></div>
+      </div> -->
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Precautions for Winter</h1>
+      <div class="h-1 w-20 bg-green-500 rounded"></div>
+      <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p> -->
+    </div>
+    <main class="page-content">
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Exercise</h2>
+          <p class="copy">physical activity is an important aspect to keep one fit throughout the winter. Daily routine of yoga or any form of physical activity will 
+            help to keep you warm and boosts the immune system improving defence against seasonal ailments like flu and colds.
+          </p>
+          <!-- <button class="btn">View Trips</button> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Winterize your home</h2>
+          <p class="copy">Install weather stripping, insulation, and storm windows.
+            <br><br>
+            Insulate water lines that run along exterior walls.
+            <br><br>
+            Clean out gutters and repair roof leaks.
+            </p>
+          <!-- <button class="btn">View Trips</button> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Check your heating systems</h2>
+          <p class="copy">Have your heating system serviced professionally to make sure that it is clean, 
+            working properly, and ventilated to the outside.
+            <br>
+            Inspect and clean fireplaces and chimneys.
+          </p>
+          <!-- <button class="btn">Book Now</button> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Take Precautions Outdoors</h2>
+          <p class="copy">Wear appropriate outdoor clothing: wear a tightly woven, preferably 
+            wind-resistant coat or jacket; inner layers of light, warm clothing; mittens; hats; 
+            scarves; and waterproof boots.</p>
+          <!-- <button class="btn">Book Now</button> -->
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+<!--gallery2 end-->
+
+<!-- contact start -->
+<section class="text-gray-600 body-font relative" id="contact">
+  <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap w-4/5">
+    <div class="lg:w-1/2 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+      <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"></iframe>
+      <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+        <div class="lg:w-1/2 px-6">
+          <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+          <p class="mt-1">New York, NY 10004, United States</p>
+        </div>
+        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+          <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+          <a class="text-indigo-500 leading-relaxed">example@email.com</a>
+          <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+          <p class="leading-relaxed">123-456-7890</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 px-20">
+      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contact Us</h2><br>
+      <!-- <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p> -->
+      <div class="relative mb-4">
+        <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+        <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+        <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+        <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+      </div>
+      <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
+        Send</button>
+      <!-- <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p> -->
+    </div>
+  </div>
+</section>
+<!-- contact end -->
+<section class="w-full flex justify-center content-center">
+  <div class="w-80 pt-8 mt-8 border-t border-gray-200 text-center"></div>
+</section>
+<!-- footer start -->
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 pb-24 pt-6 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap 
+  flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+				<img src="{{ url_for('static', filename='img/logo.png') }}" class="w-10 h-10 text-white p-2 bg-white-500 rounded-full rotate45" alt="Winter">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg> -->
+        <span class="ml-3 text-xl">WinterHacker</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-500">Best Winter Hacks 
+				To Get You Through The Toughest And Longest Season Of The Year.</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="#home" class="text-gray-600 hover:text-gray-800">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="text-gray-600 hover:text-gray-800">About</a>
+          </li>
+          <!-- <li>
+            <a href="#services" class="text-gray-600 hover:text-gray-800">Our Services</a>
+          </li> -->
+          <li>
+            <a href="#contact" class="text-gray-600 hover:text-gray-800">Contact Us</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">WINTER HACKS</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="#destinations" class="text-gray-600 hover:text-gray-800">Destinations</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-gray-800">Conditions</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-gray-800">Precautions</a>
+          </li>
+          <!-- <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li> -->
+        </nav>
+      </div>
+      <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div> -->
+    </div>
+  </div>
+  <div class="bg-gray-100">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 WinterHacker —
+        <a href="https://twitter.com/MLHacks" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@MLHacks</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
