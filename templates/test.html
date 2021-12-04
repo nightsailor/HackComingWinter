@@ -15,28 +15,30 @@
   agent-id="8b880d98-4810-466d-8b09-1e5996a71a1d"
   language-code="en"
 ></df-messenger>
+<style>
+  .bg-gray-100{
+    background-color: white;
+  }
+</style>
     {% block head %}{% endblock %}
 </head>
 
 <body>
   
 <!-- header start -->
-<header class="text-gray-600 body-font bg-indigo-100">
+<header class="text-gray-600 body-font bg-white">
   <!-- style="position: fixed; width: 100%;" -->
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center bg-indigo-100">
     <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
 			<img src="{{ url_for('static', filename='img/logo.png') }}" class="w-10 h-10 text-white p-2 bg-white-500 rounded-full rotate45" alt="Winter">
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg> -->
       <span class="ml-3 text-xl">Hack Coming Winter</span>
     </a>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
       <a href="#home" class="mr-5 hover:text-gray-900">Home</a>
       <a href="#about" class="mr-5 hover:text-gray-900">About</a>
-      <a href="#destinations" class="mr-5 hover:text-gray-900">Destinations</a>
+      <!-- <a href="#destinations" class="mr-5 hover:text-gray-900">Destinations</a>
       <a href="#conditions" class="mr-5 hover:text-gray-900">Conditions</a>
-      <a href="#precautions" class="mr-5 hover:text-gray-900">Precautions</a>
+      <a href="#precautions" class="mr-5 hover:text-gray-900">Precautions</a> -->
       <a href="#contact" class="mr-5 hover:text-gray-900">Contact</a>
     </nav>
     <a href="/login-register">
@@ -58,15 +60,10 @@
       <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Winter is coming,
         <br class="hidden lg:inline-block">Where are you going?
       </h1>
-      <!-- <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant 
-				cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic 
-				tumeric truffaut hexagon try-hard chambray.
-			</p> -->
-			<p>Winter is here, and is a tough time of year for many. The days are long and cold, 
+			<p class="mb-8 leading-relaxed">Winter is here, and is a tough time of year for many. The days are long and cold, 
 				and weather extremes can not only strike at a moment’s notice, but they can bring 
 				treacherous and dangerous conditions. Learn To make the most of this season with the 
-				best winter hacks.</p> <br>
-      <!-- <br><br><br> -->
+				best winter hacks.</p>
 			<div class="flex justify-center">
         <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
 					<a href="/login-register">Get Started</a></button>
@@ -156,17 +153,61 @@
 </section>
 <!-- destination end -->
 
+<!--Image Classification start-->
+<section id="img-classification" class="text-gray-600 body-font">
+  <div class="container px-5 pt-12 mx-auto">
+    <div class="flex flex-col">
+      <div class="h-1 bg-gray-200 rounded overflow-hidden">
+        <div class="w-24 h-full bg-green-500"></div>
+      </div>
+      <div class="flex flex-wrap sm:flex-row flex-col pt-6">
+        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
+          Winter Favourable Classification</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container px-5 pb-12 mx-auto flex flex-wrap">
+    <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+      <div class="w-full sm:p-4 px-4 mb-6">
+        <!-- <h1 class="title-font font-medium text-xl mb-2 text-gray-900">
+          Winter Favourable Classification
+        </h1> -->
+        <div class="leading-relaxed">
+          Summer and Winter Season Classification using Image Processing and Machine Learning Methods. 
+          Users can upload everyday items to know how effective or weak it is in winter to fight cold whether.
+          <a href="https://share.streamlit.io/cyrixninja/winterproject/main/main.py" class="text-indigo-500 inline-flex items-center">Try It Here
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="flex pt-4">
+          <!-- <a href="https://share.streamlit.io/cyrixninja/winterproject/main/main.py">
+            <button class="inline-flex items-center bg-green-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+              Try It Here
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </a> -->
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+      <img class="object-cover object-center w-full h-full"
+      width="600" height="300" style="height: 300px;" src="{{ url_for('static', filename='img/img-classification3.jpg') }}" alt="stats">
+    </div>
+  </div>
+</section>
+<!--Image Classification end-->
+
 <!-- gallery start -->
-<section class="text-gray-600 body-font" id="conditions">
+<section class="text-gray-600 body-font bg-gray-100" id="conditions">
   <div class="container px-5 pt-12 mx-auto w-4/5">
     <div class="flex flex-col text-center w-full mb-4 items-center">
-      <!-- <div class="lg:w-1/3 w-full mb-6 lg:mb-0">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About our work</h1>
-        <div class="h-1 w-20 bg-green-500 rounded"></div>
-      </div> -->
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Conditions In Winter</h1>
       <div class="h-1 w-20 bg-green-500 rounded"></div>
-      <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p> -->
     </div>
     <div class="flex flex-wrap -m-4 text-center">
       <div class="lg:w-1/3 sm:w-1/2 p-4">
@@ -254,16 +295,11 @@
 <!--gallery end-->
 
 <!-- gallery2 start -->
-<section class="text-gray-600 body-font" id="precautions">
+<section class="text-gray-600 body-font bg-gray-100" id="precautions">
   <div class="container px-5 mx-auto w-4/5">
-    <div class="flex flex-col text-center w-full mb-4 mt-24 items-center">
-      <!-- <div class="lg:w-1/3 w-full mb-6 lg:mb-0">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About our work</h1>
-        <div class="h-1 w-20 bg-green-500 rounded"></div>
-      </div> -->
+    <div class="flex flex-col text-center w-full mb-4 pt-24 items-center">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Precautions for Winter</h1>
       <div class="h-1 w-20 bg-green-500 rounded"></div>
-      <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p> -->
     </div>
     <main class="page-content">
       <div class="card">
@@ -324,7 +360,7 @@
         </div>
         <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
           <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-          <a class="text-indigo-500 leading-relaxed">example@email.com</a>
+          <a class="text-indigo-500 leading-relaxed">winterhacker@hackcomingwinter.us</a>
           <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
           <p class="leading-relaxed">123-456-7890</p>
         </div>
@@ -405,13 +441,15 @@
           </li> -->
         </nav>
       </div>
-      <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">IMAGE CLASSIFICATION</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            <a href="#img-classification" class="text-gray-600 hover:text-gray-800">
+              Winter Favourable Classification
+            </a>
           </li>
-          <li>
+          <!-- <li>
             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
           </li>
           <li>
@@ -419,10 +457,10 @@
           </li>
           <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
+          </li> -->
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
           <li>

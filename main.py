@@ -27,6 +27,7 @@ def get_uri():
 
 
 psycopg_uri = get_uri()
+print(psycopg_uri)
 app = Flask('app')
 app.config['SQLALCHEMY_DATABASE_URI'] = psycopg_uri
 app.config['SECRET_KEY'] = config('SECRET_KEY')
@@ -74,6 +75,7 @@ def image_recognition():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    print(request.form)
     if request.method == 'POST':
         if not request.form['username']:
             flash('username is required', 'error')
@@ -89,7 +91,7 @@ def register():
             run_transaction(sessionmaker, callback)
             flash(u'User was successfully created')
             return redirect(url_for('index'))
-    return redirect(url_for('signuplogin'))
+    return redirect(url_for('login_register'))
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -115,7 +117,7 @@ def login():
             if check:
                 flash(u'User successfully logged in')
                 return redirect(url_for('index'))
-    return redirect(url_for('signuplogin'))
+    return redirect(url_for('login_register'))
 
 
 app.run(host='0.0.0.0', port=8080)

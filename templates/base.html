@@ -26,17 +26,15 @@
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center bg-indigo-100">
     <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
 			<img src="{{ url_for('static', filename='img/logo.png') }}" class="w-10 h-10 text-white p-2 bg-white-500 rounded-full rotate45" alt="Winter">
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg> -->
       <span class="ml-3 text-xl">Hack Coming Winter</span>
     </a>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
       <a href="#home" class="mr-5 hover:text-gray-900">Home</a>
       <a href="#about" class="mr-5 hover:text-gray-900">About</a>
-      <a href="#destinations" class="mr-5 hover:text-gray-900">Destinations</a>
+      <!-- <a href="#destinations" class="mr-5 hover:text-gray-900">Destinations</a>
       <a href="#conditions" class="mr-5 hover:text-gray-900">Conditions</a>
-      <a href="#precautions" class="mr-5 hover:text-gray-900">Precautions</a>
+      <a href="#precautions" class="mr-5 hover:text-gray-900">Precautions</a> -->
+      <a href="https://share.streamlit.io/cyrixninja/winterproject/main/main.py" class="mr-5 hover:text-gray-900">Image Classification</a>
       <a href="#contact" class="mr-5 hover:text-gray-900">Contact</a>
     </nav>
     <a href="/login-register">
@@ -61,9 +59,6 @@
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
 				<img src="{{ url_for('static', filename='img/logo.png') }}" class="w-10 h-10 text-white p-2 bg-white-500 rounded-full rotate45" alt="Winter">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg> -->
         <span class="ml-3 text-xl">WinterHacker</span>
       </a>
       <p class="mt-2 text-sm text-gray-500">Best Winter Hacks 
@@ -104,13 +99,15 @@
           </li> -->
         </nav>
       </div>
-      <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">IMAGE CLASSIFICATION</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            <a href="#img-classification" class="text-gray-600 hover:text-gray-800">
+              Winter Items Classification
+            </a>
           </li>
-          <li>
+          <!-- <li>
             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
           </li>
           <li>
@@ -118,10 +115,10 @@
           </li>
           <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
+          </li> -->
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
           <li>
@@ -173,5 +170,8 @@
   </div>
 </footer>
 <!-- footer end -->
+{%- for category, message in get_flashed_messages(with_categories=true) %}
+    <script>window.alert( '{{ message }}' )</script>
+{%- endfor %}
 </body>
 </html>
