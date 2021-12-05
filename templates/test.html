@@ -16,9 +16,9 @@
   language-code="en"
 ></df-messenger>
 <style>
-  .bg-gray-100{
+  /* .bg-gray-100{
     background-color: white;
-  }
+  } */
 </style>
     {% block head %}{% endblock %}
 </head>
@@ -26,7 +26,7 @@
 <body>
   
 <!-- header start -->
-<header class="text-gray-600 body-font bg-white">
+<header class="text-gray-600 body-font bg-indigo-100">
   <!-- style="position: fixed; width: 100%;" -->
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center bg-indigo-100">
     <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -79,7 +79,7 @@
 <!-- main end -->
 
 <!-- about start -->
-<section class="text-gray-600 body-font bg-gray-100" id="about">
+<section class="text-gray-600 body-font bg-indigo-100" id="about">
   <div class="container px-5 pt-12 mx-auto">
     <div class="flex flex-wrap w-full pb-10">
       <div class="lg:w-1/2 mb-6 lg:mb-0 w-full"><!--w-full-->
@@ -100,7 +100,7 @@
 <!-- about end -->
 
 <!-- destination start -->
-<section class="text-gray-600 body-font bg-gray-100" id="destinations">
+<section class="text-gray-600 body-font bg-indigo-100" id="destinations">
   <div class="container px-5 pb-12 mx-auto">
     <div class="flex flex-wrap w-full mb-4 justify-center">
       <!-- <div class="lg:w-1/2 w-full mb-6 lg:mb-0"> -->
@@ -203,7 +203,7 @@
 <!--Image Classification end-->
 
 <!-- gallery start -->
-<section class="text-gray-600 body-font bg-gray-100" id="conditions">
+<section class="text-gray-600 body-font bg-indigo-100" id="conditions">
   <div class="container px-5 pt-12 mx-auto w-4/5">
     <div class="flex flex-col text-center w-full mb-4 items-center">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Conditions In Winter</h1>
@@ -295,7 +295,7 @@
 <!--gallery end-->
 
 <!-- gallery2 start -->
-<section class="text-gray-600 body-font bg-gray-100" id="precautions">
+<section class="text-gray-600 body-font bg-indigo-100" id="precautions">
   <div class="container px-5 mx-auto w-4/5">
     <div class="flex flex-col text-center w-full mb-4 pt-24 items-center">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Precautions for Winter</h1>
@@ -388,11 +388,11 @@
   </div>
 </section>
 <!-- contact end -->
-<section class="w-full flex justify-center content-center">
+<!-- footer start -->
+<section class="w-full flex justify-center content-center bg-indigo-100">
   <div class="w-80 pt-8 mt-8 border-t border-gray-200 text-center"></div>
 </section>
-<!-- footer start -->
-<footer class="text-gray-600 body-font">
+<footer class="text-gray-600 body-font bg-indigo-100">
   <div class="container px-5 pb-24 pt-6 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap 
   flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
@@ -431,10 +431,10 @@
             <a href="#destinations" class="text-gray-600 hover:text-gray-800">Destinations</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800">Conditions</a>
+            <a href="#conditions" class="text-gray-600 hover:text-gray-800">Conditions</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800">Precautions</a>
+            <a href="#precautions" class="text-gray-600 hover:text-gray-800">Precautions</a>
           </li>
           <!-- <li>
             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
@@ -460,28 +460,11 @@
           </li> -->
         </nav>
       </div>
-      <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div> -->
     </div>
   </div>
   <div class="bg-gray-100">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 WinterHacker —
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 WinterHacker —
         <a href="https://twitter.com/MLHacks" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@MLHacks</a>
       </p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
